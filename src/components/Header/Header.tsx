@@ -1,17 +1,17 @@
 import { HeaderContainer, OptionsList, StyledNavLink } from './styles';
 
-export function Header() {
-  const options = [
-    { name: 'home', path: '/' },
-    { name: 'blog', path: '/blog' },
-    { name: 'about me', path: '/about-me' },
-  ];
+export const urlOptions = [
+  { name: 'home', path: '/' },
+  { name: 'blog', path: '/blog' },
+  { name: 'about me', path: '/about-me' },
+];
 
+export function Header() {
   return (
     <HeaderContainer>
       <nav>
         <OptionsList>
-          {options.map(({ name, path }) => {
+          {urlOptions.map(({ name, path }) => {
             return (
               <li key={name}>
                 <StyledNavLink to={path}>{name}</StyledNavLink>
